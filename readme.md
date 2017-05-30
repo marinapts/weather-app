@@ -4,6 +4,11 @@
 
 A simple Weather application built on React, using [Open Weather Map API](https://openweathermap.org/api) and [Foundation CSS Framework](http://foundation.zurb.com/).
 
+## Demo
+
+A working demo is on [http://openweathermap-app.herokuapp.com/](http://openweathermap-app.herokuapp.com/)
+
+
 ## Installation
 
 ```
@@ -15,5 +20,3 @@ wepback
 
 Initialize the server: `node server.js`
 
-
-The current version of my project is on [http://openweathermap-app.herokuapp.com/](http://openweathermap-app.herokuapp.com/)
