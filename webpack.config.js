@@ -3,7 +3,7 @@ var webpack = require('webpack');
 module.exports = {
   entry: [
     'script!jquery/dist/jquery.min.js',
-    'script!foundation-sites/dist/foundation.min.js',
+    'script!materialize-css/dist/js/materialize.min.js',
     './app/app.jsx'
   ],
   externals: {
@@ -31,7 +31,8 @@ module.exports = {
       Examples: 'app/components/Examples.jsx',
       openWeatherMap: 'app/api/openWeatherMap.jsx',
       ErrorModal: 'app/components/ErrorModal.jsx',
-      applicationStyles: 'app/styles/app.scss'
+      applicationStyles: 'app/css/app.css',
+      spaces: 'app/css/spaces.css',
     },
     extensions: ['', '.js', '.jsx']
   },
@@ -44,6 +45,11 @@ module.exports = {
         },
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/
+      },
+      // load materialize fonts
+      {
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        loader: 'file-loader?name=public/fonts/roboto/[name].[ext]',
       }
     ]
   },
