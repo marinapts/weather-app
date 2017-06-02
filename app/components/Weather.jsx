@@ -4,15 +4,18 @@ import WeatherMessage from 'WeatherMessage';
 import openWeatherMap from 'openWeatherMap';
 import ErrorModal from 'ErrorModal';
 
-var Weather = React.createClass({
-
-    getInitialState: function () {
-        return {
+class Weather extends React.Component {
+    
+    constructor() {
+        super();
+        this.state = {
             isLoading: false
-        }
-    },
+        };
 
-    handleSearch: function (city) {
+        this.handleSearch = this.handleSearch.bind(this);
+    }
+
+    handleSearch(city) {
         var _this = this;
 
         this.setState({
@@ -32,9 +35,9 @@ var Weather = React.createClass({
                 errorMessage: e.message
             });
         });
-    },
+    }
 
-    render: function () {
+    render() {
         var {isLoading, temp, city, errorMessage} = this.state;
 
         function renderMessage () {
@@ -63,6 +66,6 @@ var Weather = React.createClass({
             </div>
         )
     }
-});
+};
 
-module.exports = Weather;
+export default Weather;

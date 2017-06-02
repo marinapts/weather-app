@@ -1,13 +1,14 @@
 import React from 'react';
 import {Link, IndexLink} from 'react-router';
 
-var Nav = React.createClass({
-    onSearch: function (e) {
+class Nav extends React.Component {
+
+    onSearch(e) {
         e.preventDefault();
         alert('Not yet wired up!');
-    },
+    }
 
-    render: function () {
+    render() {
         return (
             <nav>
                 <div className="nav-wrapper">
@@ -28,7 +29,7 @@ var Nav = React.createClass({
             </nav>
         )
     }
-});
+};
 
-module.exports = Nav;
+export default Nav;
 
